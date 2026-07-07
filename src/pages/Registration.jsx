@@ -49,7 +49,7 @@ function Registration() {
         <div className="max-w-7xl mx-auto px-6">
           <h1 className="text-5xl font-bold">Register Now</h1>
           <p className="mt-4 text-xl text-gray-200">
-            Join us for ICSISDG 2026 - 20-22 March at JG University, Ahmedabad
+            Join us for ICSISDG 2026 - 27 November at JG University, Ahmedabad
           </p>
         </div>
       </section>

@@ -32,11 +32,12 @@ function CallForPaper() {
             <h3 className="text-2xl font-bold text-red-800 mb-6">Important Dates</h3>
             <div className="space-y-4">
               {[
-                ["Paper Submission Deadline", "20 January 2026"],
-                ["Acceptance Notification", "10 February 2026"],
-                ["Camera-Ready Paper Deadline", "15 February 2026"],
-                ["Conference Dates", "20-22 March 2026"],
-                ["Publication", "25 March 2026"],
+                  ["Due date for submission"," 30 September 2026"],
+              ["Notification of acceptance","24 October 2026"],
+              ["Registration deadline","31 October 2026"],
+              ["Camera-ready paper submission due","6 November 2026"],
+              ["Conference schedule","14 November 2026"],
+               ["Conference starts on","22 November 2026"],
               ].map((item, index) => (
                 <div key={index} className="flex justify-between items-center pb-4 border-b border-yellow-300">
                   <span className="text-gray-700 font-semibold">{item[0]}</span>
