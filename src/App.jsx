@@ -15,6 +15,8 @@ import Downloads from './pages/Downloads'
 import PaperStatus from './pages/PaperStatus'
 import Footer from './common/Footer'
 import Navbar from './common/Navbar'
+import Contact from './pages/Contact'
+
 
 function App() {
   
@@ -36,6 +38,7 @@ function App() {
         <Route path='/publication' element={<Publication />}/>
         <Route path='/downloads' element={<Downloads />}/>
         <Route path='/paper-status' element={<PaperStatus />}/>
+            <Route path='/contact' element={<Contact />}/> 
       </Routes>
         <Footer />
     </>

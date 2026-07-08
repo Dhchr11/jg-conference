@@ -2,6 +2,7 @@ import React from "react";
 import logo from "../assets/logo.png";
 import { FaCalendar, FaUsers, FaGlobeAmericas } from "react-icons/fa";
 import { MdLocationOn, MdFilePresent } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
@@ -13,29 +14,58 @@ function Home() {
               <span className="bg-yellow-400 text-red-900 px-4 py-2 rounded-full font-semibold">
                 International Conference 2026
               </span>
+
               <h1 className="text-5xl font-bold mt-6 leading-tight">
                 International Conference on
                 <span className="text-yellow-400"> Smart Innovation</span>
-                <br />for Sustainable Development Goals
+                <br />
+                for Sustainable Development Goals
               </h1>
+
               <p className="mt-6 text-lg text-gray-200">
-                Join researchers, academicians, industry professionals and scholars
-                from around the world to shape a sustainable future through innovation.
+                Join researchers, academicians, industry professionals and
+                scholars from around the world to shape a sustainable future
+                through innovation.
               </p>
+
               <div className="flex flex-wrap gap-6 mt-8">
-                <div className="flex items-center gap-2"><FaCalendar className="text-yellow-400"/><span>20–22 March 2026</span></div>
-                <div className="flex items-center gap-2"><MdLocationOn className="text-yellow-400"/><span>JG University, Ahmedabad</span></div>
+                <div className="flex items-center gap-2">
+                  <FaCalendar className="text-yellow-400" />
+                  <span>20–22 March 2026</span>
+                </div>
+
+                <div className="flex items-center gap-2">
+                  <MdLocationOn className="text-yellow-400" />
+                  <span>JG University, Ahmedabad</span>
+                </div>
               </div>
+
               <div className="flex gap-5 mt-10">
-                <button className="bg-yellow-400 text-red-900 px-8 py-3 rounded-lg font-semibold hover:bg-yellow-300">Submit Paper</button>
-                <button className="border border-white px-8 py-3 rounded-lg hover:bg-white hover:text-red-900">Register Now</button>
+                <Link
+                  to="/guidelines"
+                  className="bg-yellow-400 text-red-900 px-8 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition"
+                >
+                  Submit Paper
+                </Link>
+
+                <Link
+                  to="/registration"
+                  className="border border-white px-8 py-3 rounded-lg hover:bg-white hover:text-red-900 transition"
+                >
+                  Register Now
+                </Link>
               </div>
             </div>
+
             <div className="flex justify-center">
               <div className="bg-white rounded-3xl shadow-2xl p-10">
-                <img src={logo} alt="JG University" className="w-80 mx-auto"/>
-                <h2 className="text-red-800 font-bold text-2xl mt-6 text-center">JG University</h2>
-                <p className="text-gray-600 mt-4 text-center">Empowering Innovation Through Research & Technology</p>
+                <img src={logo} alt="JG University" className="w-80 mx-auto" />
+                <h2 className="text-red-800 font-bold text-2xl mt-6 text-center">
+                  JG University
+                </h2>
+                <p className="text-gray-600 mt-4 text-center">
+                  Empowering Innovation Through Research & Technology
+                </p>
               </div>
             </div>
           </div>
@@ -45,56 +75,69 @@ function Home() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <img src={logo} alt="Conference" className="w-96 mx-auto"/>
+            <img src={logo} alt="Conference" className="w-96 mx-auto" />
+
             <div>
-              <h2 className="text-4xl font-bold text-red-800 mb-6">About ICSISDG 2026</h2>
-              <p className="text-gray-700 leading-8 mb-4">
-                The International Conference on Smart Innovation for Sustainable Development Goals (ICSISDG 2026)
-                provides a global platform for academicians, researchers, industry professionals,
-                scientists and scholars to present innovative research, exchange ideas and explore
-                emerging technologies that support the Sustainable Development Goals (SDGs).
-              </p>
-              <p className="text-gray-700 leading-8 mb-4">
-                The conference emphasizes interdisciplinary research in Artificial Intelligence and
-                Machine Learning, Internet of Things (IoT), Smart Systems, Emerging Technologies,
-                Smart Finance & FinTech, Business Intelligence, Data Analytics, Entrepreneurship,
-                Innovation and Sustainable Startup Ecosystems.
-              </p>
+              <h2 className="text-4xl font-bold text-red-800 mb-6">
+                About ICSISDG 2026
+              </h2>
+
               <p className="text-gray-700 leading-8">
-                ICSISDG 2026 features keynote lectures, invited talks, technical paper presentations,
-                tutorials, workshops and panel discussions to promote collaboration among academia,
-                industry and policymakers for sustainable innovation.
+                The International Conference on Smart Innovation for Sustainable
+                Development Goals (ICSISDG 2026) provides a global platform for
+                researchers, academicians, industry professionals, scientists
+                and scholars to present innovative research and exchange ideas.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="py-20 bg-gray-50">
+      {/* About JG University */}
+      <section className="py-20 bg-yellow-50">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-4xl font-bold text-red-800 mb-6">About JG University</h2>
-              <p className="text-gray-700 leading-8 mb-4">
-                JG University is a new-age, technology-driven university committed to delivering
-                future-focused education aligned with evolving industry needs and global academic standards.
-              </p>
-              <p className="text-gray-700 leading-8 mb-4">
-                Recognized by the UGC, the University offers undergraduate, postgraduate, doctoral
-                and professional programmes across Engineering, Computer Science, Management,
-                Commerce, Law, Science & Technology, and Investigative & Applied Sciences.
-              </p>
-              <p className="text-gray-700 leading-8 mb-4">
-                The University emphasizes experiential learning, interdisciplinary education,
-                industry collaboration, innovation, entrepreneurship and research excellence.
-              </p>
-              <p className="text-gray-700 leading-8">
-                Sponsored by the ASIA Charitable Trust (established in 1965), JG University builds
-                upon more than six decades of educational excellence while preparing globally
-                competent professionals committed to sustainable development.
-              </p>
-            </div>
-            <img src={logo} alt="JG University" className="w-96 mx-auto"/>
+          <h2 className="text-center text-4xl font-bold text-red-800 mb-12">
+            About JG University
+          </h2>
+
+          <div className="max-w-5xl mx-auto space-y-6 text-gray-700 leading-8">
+            <p>
+              JG University is a new-age, technology-driven university
+              committed to delivering future-focused education that aligns
+              with evolving industry needs and global academic standards.
+              Established with the vision of nurturing innovation,
+              entrepreneurship, and research excellence, the University
+              offers a diverse range of undergraduate, postgraduate,
+              doctoral, and professional programs across disciplines
+              including Engineering, Computer Science, Management, Commerce,
+              Law, Science & Technology, Investigative and Applied Sciences.
+            </p>
+
+            <p>
+              Recognized by the University Grants Commission (UGC), JG
+              University emphasizes experiential learning, interdisciplinary
+              education, industry collaboration, skill development, and
+              technology-enabled teaching methodologies. Through a
+              curriculum designed in consultation with academic experts and
+              industry leaders, the University equips students with the
+              knowledge, practical skills, and entrepreneurial mindset
+              required to excel in employment, higher education, research,
+              or self-employment.
+            </p>
+
+            <p>
+              JG University is sponsored by the ASIA Charitable Trust, a
+              distinguished educational trust established in 1965, with a
+              legacy of over six decades in promoting quality education. The
+              Trust has made significant contributions to higher education
+              by successfully managing 17 colleges and 3 schools, serving
+              thousands of students across diverse academic disciplines.
+              Building on this strong foundation, JG University continues to
+              foster academic excellence, innovation, research, and social
+              responsibility, while preparing graduates to become globally
+              competent professionals and responsible citizens who
+              contribute to sustainable development.
+            </p>
           </div>
         </div>
       </section>
@@ -103,13 +146,15 @@ function Home() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              [<FaUsers size={45} className="mx-auto text-red-700"/>,"500+","Participants"],
-              [<MdFilePresent size={45} className="mx-auto text-red-700"/>,"150+","Research Papers"],
-              [<FaGlobeAmericas size={45} className="mx-auto text-red-700"/>,"20+","Countries"],
-              [<FaCalendar size={45} className="mx-auto text-red-700"/>,"3 Days","Conference"]
-            ].map((i,idx)=>(
-              <div key={idx} className="bg-white rounded-xl shadow-lg p-8 text-center">
-                {i[0]}<h2 className="text-4xl font-bold mt-4">{i[1]}</h2><p className="text-gray-600 mt-2">{i[2]}</p>
+              [<FaUsers size={45} className="mx-auto text-red-700" />, "500+", "Participants"],
+              [<MdFilePresent size={45} className="mx-auto text-red-700" />, "150+", "Research Papers"],
+              [<FaGlobeAmericas size={45} className="mx-auto text-red-700" />, "20+", "Countries"],
+              [<FaCalendar size={45} className="mx-auto text-red-700" />, "3 Days", "Conference"],
+            ].map((item, index) => (
+              <div key={index} className="bg-white rounded-xl shadow-lg p-8 text-center">
+                {item[0]}
+                <h2 className="text-4xl font-bold mt-4">{item[1]}</h2>
+                <p className="text-gray-600 mt-2">{item[2]}</p>
               </div>
             ))}
           </div>
@@ -118,19 +163,27 @@ function Home() {
 
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-center text-4xl font-bold text-red-800 mb-16">Important Dates</h2>
-          <div className="grid md:grid-cols-4 gap-8">
+          <h2 className="text-center text-4xl font-bold text-red-800 mb-16">
+            Important Dates
+          </h2>
+          <div className="max-w-4xl mx-auto space-y-6">
             {[
-              ["Due date for submission"," 30 September 2026"],
-              ["Notification of acceptance","24 October 2026"],
-              ["Registration deadline","31 October 2026"],
-              ["Camera-ready paper submission due","6 November 2026"],
-              ["Conference schedule","14 November 2026"],
-               ["Conference starts on","22 November 2026"],
-            ].map((d,i)=>(
-              <div key={i} className="border-t-4 border-yellow-400 bg-gray-50 rounded-xl p-8 shadow">
+              ["Due Date for Submission", "30 September 2026"],
+              ["Notification of Acceptance", "24 October 2026"],
+              ["Registration Deadline", "31 October 2026"],
+              ["Camera-ready Paper Submission Due", "6 November 2026"],
+              ["Conference Schedule", "14 November 2026"],
+              ["Conference Starts On", "22 November 2026"],
+            ].map((d, i) => (
+              <div
+                key={i}
+                className="flex flex-col md:flex-row md:items-center md:justify-between bg-white border-l-4 border-yellow-400 rounded-xl shadow-lg p-6 hover:shadow-xl transition duration-300"
+              >
                 <h3 className="text-xl font-bold text-red-700">{d[0]}</h3>
-                <p className="mt-4 text-gray-600">{d[1]}</p>
+
+                <span className="mt-3 md:mt-0 bg-yellow-400 text-red-900 font-semibold px-5 py-2 rounded-full">
+                  {d[1]}
+                </span>
               </div>
             ))}
           </div>
@@ -140,12 +193,17 @@ function Home() {
       <section className="bg-red-800 text-white py-20">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <h2 className="text-5xl font-bold">Ready to Join the Conference?</h2>
+
           <p className="mt-6 text-xl text-gray-200">
             Register now and become part of an international research community.
           </p>
-          <button className="mt-10 bg-yellow-400 text-red-900 px-10 py-4 rounded-lg text-lg font-bold hover:bg-yellow-300">
+
+          <Link
+            to="/registration"
+            className="inline-block mt-10 bg-yellow-400 text-red-900 px-10 py-4 rounded-lg text-lg font-bold hover:bg-yellow-300 transition"
+          >
             Register Now
-          </button>
+          </Link>
         </div>
       </section>
     </>

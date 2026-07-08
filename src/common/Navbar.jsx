@@ -160,7 +160,7 @@ function Navbar() {
             to="/tracks"
             className="hover:text-red-700 duration-300"
           >
-            Core Tracks
+             Tracks
           </NavLink>
 
           <NavLink
@@ -175,6 +175,13 @@ function Navbar() {
             className="hover:text-red-700 duration-300"
           >
             Registration
+          </NavLink>
+
+          <NavLink
+            to="/contact"
+            className="hover:text-red-700 duration-300"
+          >
+            Contact
           </NavLink>
 
         </ul>
@@ -249,8 +256,13 @@ function Navbar() {
           <NavLink className="block px-6 py-4 border-b" to="/paper-status" onClick={() => setMobileOpen(false)}>
             Paper Status
           </NavLink>
-          <NavLink className="block px-6 py-4" to="/registration" onClick={() => setMobileOpen(false)}>
+
+          <NavLink className="block px-6 py-4 border-b" to="/registration" onClick={() => setMobileOpen(false)}>
             Registration
+          </NavLink>
+
+          <NavLink className="block px-6 py-4" to="/contact" onClick={() => setMobileOpen(false)}>
+            Contact
           </NavLink>
 
         </div>

@@ -128,12 +128,16 @@ function Tracks() {
                 key={track.id}
                 className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300 flex flex-col"
               >
-                <div className="bg-gradient-to-r from-red-700 to-red-600 p-6 text-white">
-                  <div className="text-4xl mb-4">{track.icon}</div>
+                <div className=" bg-gradient-to-r from-red-700 to-red-600 p-6 text-white">
+                 <div className="flex items-center gap-3 mb-4">
+  <div className="text-4xl text-red-700">
+    {track.icon}
+  </div>
 
-                  <span className="inline-block bg-yellow-400 text-red-900 text-xs font-bold px-3 py-1 rounded-full mb-3">
-                    {track.title}
-                  </span>
+  <span className="bg-yellow-400 text-red-900 text-sm font-bold px-3 py-2 rounded-full">
+    {track.title}
+  </span>
+</div>
 
                   <h3 className="text-xl font-bold leading-snug">
                     {track.subtitle}
